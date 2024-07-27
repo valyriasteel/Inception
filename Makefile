@@ -23,7 +23,6 @@ re:
 
 clean: stop_containers rm_containers rm_images rm_volumes rm_networks
 	@sudo rm -rf $(DATA_DIR)
-	@sudo docker system prune -af
 
 stop_containers:
 	@if [ -n "$$(docker ps -q)" ]; then \
